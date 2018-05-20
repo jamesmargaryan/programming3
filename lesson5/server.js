@@ -18,5 +18,11 @@ io.on('connection', function (socket) {
     socket.on("send message", function (data) {
         messages.push(data);
         io.sockets.emit("display message", data);
-    })
+    });
+
+    socket.on('jnjel', function(){
+        messages = [];
+        io.sockets.emit('jnjeq tagery');
+
+    });
 });
